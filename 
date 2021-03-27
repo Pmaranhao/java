@@ -1,0 +1,340 @@
+[33mcommit 9693dd9909b9d1adaeaaecb23bcd78fb50d9efa5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: pedro.maranhao@outlook.com.br <pedro.maranhao@outlook.com.br>
+Date:   Sat Mar 27 11:58:48 2021 -0300
+
+    desafio array curso udemy
+
+[1mdiff --git a/src/DesafioArray/DesafioArray.java b/src/DesafioArray/DesafioArray.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0b0249d[m
+[1m--- /dev/null[m
+[1m+++ b/src/DesafioArray/DesafioArray.java[m
+[36m@@ -0,0 +1,35 @@[m
+[32m+[m[32mpackage DesafioArray;[m
+[32m+[m
+[32m+[m[32m/*Perguntar ao usuário quantas notas ele quer passar[m
+[32m+[m[32m * no primeiro for, armazenar as nosta e no foreach mostrar as notas.[m
+[32m+[m[32m * Informar média de notas.*/[m
+[32m+[m
+[32m+[m[32mimport java.util.Scanner;[m
+[32m+[m
+[32m+[m[32mpublic class DesafioArray {[m
+[32m+[m
+[32m+[m	[32mpublic static void main(String[] args) {[m
+[32m+[m[41m		[m
+[32m+[m		[32mScanner entrada = new Scanner(System.in);[m
+[32m+[m[41m		[m
+[32m+[m		[32mSystem.out.print("Quantas notas: ");[m
+[32m+[m		[32mint quantidadeDeNotas = entrada.nextInt();[m
+[32m+[m[41m		[m
+[32m+[m		[32mdouble[] notas = new double[quantidadeDeNotas];[m
+[32m+[m[41m		[m
+[32m+[m		[32mfor (int i = 0; i < quantidadeDeNotas; i++) {[m
+[32m+[m			[32mSystem.out.print("Digite a " + (i+1) + " nota: ");[m
+[32m+[m			[32mnotas[i] = entrada.nextDouble();[m
+[32m+[m		[32m}[m
+[32m+[m[41m		[m
+[32m+[m		[32mdouble totalDeNotas = 0;[m
+[32m+[m		[32mfor (double nota: notas) {[m
+[32m+[m			[32mSystem.out.print(nota + " ");[m
+[32m+[m			[32mtotalDeNotas += nota;[m
+[32m+[m		[32m}[m
+[32m+[m[41m		[m
+[32m+[m		[32mSystem.out.println("\nMédia das notas: " + totalDeNotas / quantidadeDeNotas);[m[41m		[m
+[32m+[m[41m		[m
+[32m+[m		[32mentrada.close();[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
+
+[33mcommit 9092a8f855541fca4b92a3865430ae4699eb7a16[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: pedro.maranhao@outlook.com.br <pedro.maranhao@outlook.com.br>
+Date:   Fri Mar 26 22:02:44 2021 -0300
+
+    desafio aula udemy e bytebank aula alura
+
+[1mdiff --git a/.classpath b/.classpath[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1cd9d95[m
+[1m--- /dev/null[m
+[1m+++ b/.classpath[m
+[36m@@ -0,0 +1,10 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<classpath>[m
+[32m+[m	[32m<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">[m
+[32m+[m		[32m<attributes>[m
+[32m+[m			[32m<attribute name="module" value="true"/>[m
+[32m+[m		[32m</attributes>[m
+[32m+[m	[32m</classpathentry>[m
+[32m+[m	[32m<classpathentry kind="src" path="src"/>[m
+[32m+[m	[32m<classpathentry kind="output" path="bin"/>[m
+[32m+[m[32m</classpath>[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2fc6c8f[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,61 @@[m
+[32m+[m[32m.metadata[m
+[32m+[m[32mbin/[m
+[32m+[m[32mtmp/[m
+[32m+[m[32m*.tmp[m
+[32m+[m[32m*.bak[m
+[32m+[m[32m*.swp[m
+[32m+[m[32m*~.nib[m
+[32m+[m[32mlocal.properties[m
+[32m+[m[32m.settings/[m
+[32m+[m[32m.loadpath[m
+[32m+[m[32m.recommenders[m
+[32m+[m
+[32m+[m[32m# External tool builders[m
+[32m+[m[32m.externalToolBuilders/[m
+[32m+[m
+[32m+[m[32m# Locally stored "Eclipse launch configurations"[m
+[32m+[m[32m*.launch[m
+[32m+[m
+[32m+[m[32m# PyDev specific (Python IDE for Eclipse)[m
+[32m+[m[32m*.pydevproject[m
+[32m+[m
+[32m+[m[32m# CDT-specific (C/C++ Development Tooling)[m
+[32m+[m[32m.cproject[m
+[32m+[m
+[32m+[m[32m# CDT- autotools[m
+[32m+[m[32m.autotools[m
+[32m+[m
+[32m+[m[32m# Java annotation processor (APT)[m
+[32m+[m[32m.factorypath[m
+[32m+[m
+[32m+[m[32m# PDT-specific (PHP Development Tools)[m
+[32m+[m[32m.buildpath[m
+[32m+[m
+[32m+[m[32m# sbteclipse plugin[m
+[32m+[m[32m.target[m
+[32m+[m
+[32m+[m[32m# Tern plugin[m
+[32m+[m[32m.tern-project[m
+[32m+[m
+[32m+[m[32m# TeXlipse plugin[m
+[32m+[m[32m.texlipse[m
+[32m+[m
+[32m+[m[32m# STS (Spring Tool Suite)[m
+[32m+[m[32m.springBeans[m
+[32m+[m
+[32m+[m[32m# Code Recommenders[m
+[32m+[m[32m.recommenders/[m
+[32m+[m
+[32m+[m[32m# Annotation Processing[m
+[32m+[m[32m.apt_generated/[m
+[32m+[m[32m.apt_generated_test/[m
+[32m+[m
+[32m+[m[32m# Scala IDE specific (Scala & Java development for Eclipse)[m
+[32m+[m[32m.cache-main[m
+[32m+[m[32m.scala_dependencies[m
+[32m+[m[32m.worksheet[m
+[32m+[m
+[32m+[m[32m# Uncomment this line if you wish to ignore the project description file.[m
+[32m+[m[32m# Typically, this file would be tracked if it contains build/dependency configurations:[m
+[32m+[m[32m#.project[m
+[32m+[m[32mÂ© 2021 GitHub, Inc.[m
+\ No newline at end of file[m
+[1mdiff --git a/.project b/.project[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ea4916e[m
+[1m--- /dev/null[m
+[1m+++ b/.project[m
+[36m@@ -0,0 +1,17 @@[m
+[32m+[m[32m<?xml version="1.0" encoding="UTF-8"?>[m
+[32m+[m[32m<projectDescription>[m
+[32m+[m	[32m<name>repositorioJava</name>[m
+[32m+[m	[32m<comment></comment>[m
+[32m+[m	[32m<projects>[m
+[32m+[m	[32m</projects>[m
+[32m+[m	[32m<buildSpec>[m
+[32m+[m		[32m<buildCommand>[m
+[32m+[m			[32m<name>org.eclipse.jdt.core.javabuilder</name>[m
+[32m+[m			[32m<arguments>[m
+[32m+[m			[32m</arguments>[m
+[32m+[m		[32m</buildCommand>[m
+[32m+[m	[32m</buildSpec>[m
+[32m+[m	[32m<natures>[m
+[32m+[m		[32m<nature>org.eclipse.jdt.core.javanature</nature>[m
+[32m+[m	[32m</natures>[m
+[32m+[m[32m</projectDescription>[m
+[1mdiff --git a/src/bytebank/Conta.java b/src/bytebank/Conta.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..eef8286[m
+[1m--- /dev/null[m
+[1m+++ b/src/bytebank/Conta.java[m
+[36m@@ -0,0 +1,31 @@[m
+[32m+[m[32mpackage bytebank;[m
+[32m+[m
+[32m+[m[32mpublic class Conta {[m
+[32m+[m	[32mdouble saldo;[m
+[32m+[m	[32mint agencia;[m
+[32m+[m	[32mint numero;[m
+[32m+[m	[32mString titular;[m
+[32m+[m[41m	[m
+[32m+[m	[32mpublic void deposita(double valor){[m
+[32m+[m		[32mthis.saldo += valor;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32mpublic boolean saca(double valor){[m
+[32m+[m		[32mif (this.saldo >= valor) {[m
+[32m+[m			[32mthis.saldo -= valor;[m
+[32m+[m			[32mreturn true;[m
+[32m+[m		[32m} else {[m
+[32m+[m			[32mreturn false;[m
+[32m+[m		[32m}[m
+[32m+[m	[32m}[m[41m	[m
+[32m+[m[41m		[m
+[32m+[m	[32mpublic boolean transfere(double valor, Conta destino) {[m
+[32m+[m		[32mif(this.saldo >= valor) {[m
+[32m+[m			[32mthis.saldo -= valor;[m
+[32m+[m			[32mdestino.deposita(valor);[m
+[32m+[m			[32mreturn true;[m
+[32m+[m		[32m}[m[41m [m
+[32m+[m		[32mreturn false;[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/bytebank/CriaConta.java b/src/bytebank/CriaConta.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a165355[m
+[1m--- /dev/null[m
+[1m+++ b/src/bytebank/CriaConta.java[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mpackage bytebank;[m
+[32m+[m
+[32m+[m[32mpublic class CriaConta {[m
+[32m+[m
+[32m+[m	[32mpublic static void main(String[] args) {[m
+[32m+[m
+[32m+[m		[32mConta primeiraConta = new Conta();[m
+[32m+[m[41m		[m
+[32m+[m		[32mprimeiraConta.saldo = 200;[m
+[32m+[m		[32mSystem.out.println(primeiraConta.saldo);[m
+[32m+[m[41m		[m
+[32m+[m		[32mprimeiraConta.saldo += 100;[m
+[32m+[m		[32mSystem.out.println(primeiraConta.saldo);[m
+[32m+[m[41m		[m
+[32m+[m		[32mConta segundaConta = new Conta();[m
+[32m+[m[41m		[m
+[32m+[m		[32msegundaConta.saldo = 50;[m
+[32m+[m[41m		[m
+[32m+[m[41m		[m
+[32m+[m		[32mSystem.out.println("Primeira conta = R$" + primeiraConta.saldo);[m
+[32m+[m		[32mSystem.out.println("Segunda conta = R$" + segundaConta.saldo);[m
+[32m+[m[41m		[m
+[32m+[m		[32mConta dependenteDaPrimeiraConta = new Conta();[m
+[32m+[m		[32mdependenteDaPrimeiraConta = primeiraConta;[m
+[32m+[m[41m		[m
+[32m+[m		[32mdependenteDaPrimeiraConta.saldo += 200;[m
+[32m+[m[41m		[m
+[32m+[m		[32mSystem.out.println("Conta da esposa conjunta, saldo de R$ " + dependenteDaPrimeiraConta.saldo);[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m[41m			[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/bytebank/TestaMetodo.java b/src/bytebank/TestaMetodo.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..832e24d[m
+[1m--- /dev/null[m
+[1m+++ b/src/bytebank/TestaMetodo.java[m
+[36m@@ -0,0 +1,26 @@[m
+[32m+[m[32mpackage bytebank;[m
+[32m+[m
+[32m+[m[32mpublic class TestaMetodo {[m
+[32m+[m	[32m public static void main(String[] args) {[m
+[32m+[m		[32mConta contaDoPedro = new Conta();[m
+[32m+[m[41m		[m
+[32m+[m		[32mcontaDoPedro.saldo = 300;[m
+[32m+[m		[32mSystem.out.println(contaDoPedro.saldo);[m
+[32m+[m		[32mcontaDoPedro.deposita(300);[m
+[32m+[m		[32mSystem.out.println(contaDoPedro.saldo);[m
+[32m+[m[41m		[m
+[32m+[m		[32mboolean conseguiuSacar = contaDoPedro.saca(590);[m
+[32m+[m		[32mSystem.out.println(contaDoPedro.saldo);[m
+[32m+[m		[32mSystem.out.println("Sacou: " + conseguiuSacar);[m
+[32m+[m[41m	 [m
+[32m+[m		[32mConta contaDaFernanda = new Conta();[m
+[32m+[m		[32mcontaDaFernanda.deposita(1000);[m
+[32m+[m[41m		[m
+[32m+[m		[32mcontaDaFernanda.transfere(300, contaDoPedro);[m
+[32m+[m[41m		[m
+[32m+[m		[32mSystem.out.println("Saldo Pedro: R$ " + contaDoPedro.saldo +[m[41m [m
+[32m+[m				[32m"\nSaldo Fernanda: R$ " + contaDaFernanda.saldo);[m
+[32m+[m[41m	 [m
+[32m+[m	[32m }[m
+[32m+[m[41m	 [m
+[32m+[m[32m}[m
+[1mdiff --git a/src/desafioComida/Comida.java b/src/desafioComida/Comida.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b1eacee[m
+[1m--- /dev/null[m
+[1m+++ b/src/desafioComida/Comida.java[m
+[36m@@ -0,0 +1,13 @@[m
+[32m+[m[32mpackage desafioComida;[m
+[32m+[m
+[32m+[m[32mpublic class Comida {[m
+[32m+[m[41m	[m
+[32m+[m	[32mString nome;[m
+[32m+[m	[32mdouble peso;[m
+[32m+[m[41m	[m
+[32m+[m	[32mComida(String nome, double peso) {[m
+[32m+[m		[32mthis.nome = nome;[m
+[32m+[m		[32mthis.peso = peso;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/desafioComida/Jantar.java b/src/desafioComida/Jantar.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ccfac7c[m
+[1m--- /dev/null[m
+[1m+++ b/src/desafioComida/Jantar.java[m
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32mpackage desafioComida;[m
+[32m+[m
+[32m+[m[32mpublic class Jantar {[m
+[32m+[m[41m	[m
+[32m+[m	[32mpublic static void main(String[] args) {[m
+[32m+[m[41m		[m
+[32m+[m		[32mComida feijao = new Comida("Feijão" , 0.050);[m
+[32m+[m		[32mComida arroz = new Comida("Arroz" , 0.150);[m
+[32m+[m		[32mComida peixe = new Comida("Peixe" , 0.100);[m
+[32m+[m		[32mComida batata = new Comida("batata" , 0.150);[m
+[32m+[m[41m		[m
+[32m+[m		[32mPessoa pedro = new Pessoa("Pedro" , 72.200);[m
+[32m+[m[41m		[m
+[32m+[m		[32mSystem.out.println(pedro.peso);[m
+[32m+[m[41m		[m
+[32m+[m		[32mpedro.comer(feijao);[m
+[32m+[m		[32mSystem.out.println(pedro.peso);[m
+[32m+[m[41m		[m
+[32m+[m		[32mpedro.comer(peixe);[m
+[32m+[m		[32mSystem.out.println(pedro.peso);[m
+[32m+[m	[32m}[m[41m	[m
+[32m+[m[41m		[m
+[32m+[m[32m}[m
+[1mdiff --git a/src/desafioComida/Pessoa.java b/src/desafioComida/Pessoa.java[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a80d792[m
+[1m--- /dev/null[m
+[1m+++ b/src/desafioComida/Pessoa.java[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32mpackage desafioComida;[m
+[32m+[m
+[32m+[m[32mpublic class Pessoa {[m
+[32m+[m
+[32m+[m	[32mString nome;[m
+[32m+[m	[32mdouble peso;[m
+[32m+[m
+[32m+[m	[32mPessoa(String nome, double peso){[m
+[32m+[m		[32mthis.nome = nome;[m
+[32m+[m		[32mthis.peso = peso;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m	[32mvoid comer(Comida comida) {[m
+[32m+[m		[32mthis.peso += comida.peso;[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[41m	[m

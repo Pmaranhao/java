@@ -16,17 +16,20 @@ public class DesafioArray {
 		int quantidadeDeNotas = entrada.nextInt();
 		
 		double[] notas = new double[quantidadeDeNotas];
+		double totalDeNotas = 0;
 		
 		for (int i = 0; i < quantidadeDeNotas; i++) {
 			System.out.print("Digite a " + (i+1) + " nota: ");
 			notas[i] = entrada.nextDouble();
+		
+			if( notas[i] < 0  || notas[i] > 10 ) {
+				System.out.println("Nota inválida!");
+				break;
+			}
+			System.out.println(notas[i]);
+			totalDeNotas += notas[i];
 		}
 		
-		double totalDeNotas = 0;
-		for (double nota: notas) {
-			System.out.print(nota + " ");
-			totalDeNotas += nota;
-		}
 		
 		System.out.println("\nMédia das notas: " + totalDeNotas / quantidadeDeNotas);		
 		
