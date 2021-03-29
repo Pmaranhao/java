@@ -2,7 +2,7 @@ package bytebank;
 
 public class TestaMetodo {
 	 public static void main(String[] args) {
-		Conta contaDoPedro = new Conta();
+		Conta contaDoPedro = new Conta(372, 198764);
 		
 		contaDoPedro.saldo = 300;
 		System.out.println(contaDoPedro.saldo);
@@ -13,7 +13,7 @@ public class TestaMetodo {
 		System.out.println(contaDoPedro.saldo);
 		System.out.println("Sacou: " + conseguiuSacar);
 	 
-		Conta contaDaFernanda = new Conta();
+		Conta contaDaFernanda = new Conta(372, 198468);
 		contaDaFernanda.deposita(1000);
 		
 		contaDaFernanda.transfere(300, contaDoPedro);

@@ -6,6 +6,11 @@ public class Conta {
 	int numero;
 	String titular;
 	
+	Conta(int agencia, int numero) {
+		this.agencia = agencia;
+		this.numero = numero;
+	}
+	
 	public void deposita(double valor){
 		this.saldo += valor;
 	}

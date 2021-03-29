@@ -18,6 +18,12 @@ public class Jantar {
 		
 		pedro.comer(peixe);
 		System.out.println(pedro.peso);
+		
+		pedro.comer(batata);
+		System.out.println(pedro.peso);
+		
+		pedro.comer(arroz);
+		System.out.println(pedro.peso);
 	}	
 		
 }
